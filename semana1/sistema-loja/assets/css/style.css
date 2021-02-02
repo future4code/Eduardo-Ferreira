@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EEEFED;
+}
+
+.container {
+    width: 100%;
+}
+
+.header {   
+    height: 70px;
+    text-align: center;
+    background: rgb(0,28,105);
+    background: linear-gradient(90deg, rgba(0,28,105,1) 0%, rgba(9,85,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.logotipo {
+    position: relative;
+    top: 0px;;
+    padding: 30px 50px;
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 5px solid #003366;
+}
+
+.logotipo p {
+    padding-top: 10px;
+}
+
+.menu {
+    margin-top: 220px;
+    position: relative;
+    text-align: center;
+}
+
+.menu a {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    padding: 22px;
+    color: #000;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.menu a::after {
+    left: 50%;
+    margin-left: -25px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #000;
+    bottom: 4px;
+}
+
+.menu a::before {
+    bottom: 50px;
+    left: 50%;
+    margin-left: -45px;
+    display: inline-block;
+    position: absolute;
+    content: "";
+    background-position: center;
+    background-size: 44px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+
+.menu a.index::before {
+    background-image: url("../../images/home.png");
+}
+
+.menu a.estoque::before {
+    background-image: url("../../images/factory-stock-house.png");
+}
+
+.menu a.produto::before  {
+    background-image: url("../../images/produto2.png");
+}
+
+.menu a.funcionarios::before  {
+    background-image: url("../../images/employees.png");
+}
+
+.content {
+    margin: 60px auto;
+    text-align: center;
+    max-width: 700px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.footer {
+    margin-top: 180px;
+    position: relative;
+    text-align: center;
+    background: rgb(0,28,105);
+    background: linear-gradient(90deg, rgba(0,28,105,1) 0%, rgba(9,85,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 20px 0;
+}
+
+.footer p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer img {
+    margin: 20px;
+}
+
+/*************** Funcionários ****************/
+
+.funcionarios {
+    text-align: center;
+    
+    margin-top: 100px;
+}
+
+/*************** Estoque ****************/
+
+.estoque {
+    margin-top: 80px;
+}
+
+.estoque table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.estoque table tr td {
+    padding: 20px;
+}
+
+/*************** Produtos ****************/
+
+.produtos {
+    position: relative;
+    margin: 80px auto;
+    width: 680px;
+}
+
+.form-produtos {
+    position: relative;
+    margin-top: 0px;
+    margin: 30px auto;
+}
+
+.form-produtos div {
+    margin-bottom: 30px;
+}
+
+.form-produtos h2 {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #888;
+    line-height: 50px;
+}
+
+input {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    padding: 10px;;
+}
+
+.form-add {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.form-add button {
+    border: 0;
+    padding: 20px;
+    background-color: #04A6CE;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
