@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Gerenciador da loja do Edu</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="header">
+            <div class="logotipo">
+                <h1>Painel de Controle</h1>
+                <p>Administre sua loja e controle suas vendas.</p>
+            </div>
+        </div>
+        <nav class="menu">
+            <li><a class="index" href="./index.html"></a><span class="icon-index">Home</span></li>
+            <li><a class="estoque" href="./ctrl-estoque.html"></a><span class="icon-estoque">Controle de Estoque</span></li>
+            <li><a class="produto" href="./add-produto.html"></a><span class="icon-produto">Adicionar Produtos</span></li>
+            <li><a class="funcionarios" href="./funcionarios.html"></a><span class="icon-funcionarios">Funcionarios</span></li>
+            <li><a class="funcionarios" href="./add-venda.html"></a><span class="icon-vendas">Adicionar Vendas</span></li>
+            <li><a class="funcionarios" href="./historico-vendas.html"></a><span class="icon-relatorio">Histórico de Vendas</span></li>
+        </nav>
+    </header>
+    <section class="add-vendas">
+        <div class="content">
+            <h2 class="titulo">Adicionar Vendas:</h2>
+            <form class="form-cadastrar">
+                <div>
+                    <label for="produto">Produto:</label>
+                    <select name="seleciona-produto" id="seleciona-produto" value="1">
+                        <option>Selecione um produto</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="produto">Funcionário:</label>
+                    <select name="seleciona-produto" id="seleciona-produto" value="1">
+                        <option>Selecione um funcionário</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="produto">Método:</label>
+                    <select name="seleciona-produto" id="seleciona-produto" value="1">
+                        <option>Selecione um método</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                        <option>Máquina de Lavar Roupas</option>
+                    </select>
+                </div>
+                <div>
+                    <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+                    <label for="quantidade">Qtd.: </label>
+                    <input type="number" id="quatidade" name="quantidade">
+                </div>
+                <div>
+                    <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+                    <label for="quantidade">Data:</label>
+                    <input type="date" id="quatidade" name="quantidade">
+                </div>
+                <button id="cadastrar" class="add">ADICIONAR</button>
+                <button id="cadastrar" class="add">CADASTRAR</button>
+            </form>
+            <div class="produto-vendido">
+                <div>
+                    <div class="titulo">Produto</div>
+                    <span>Televisão 3 teste 3 teste 3</span>
+                </div>
+                <div>
+                    <div class="titulo">Total</div>
+                    <span>R$ 99,99</span>
+                </div>
+                <div>
+                    <div class="titulo">Quantidade</div>
+                    <span>25</span>
+                </div>
+                <div>
+                    <div class="titulo">Data</div>
+                    <span>17/05/2015</span>
+                </div>
+                <div>
+                    <div class="titulo">Produto</div>
+                    <span>Cartão</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container footer">
+        <p>Siga-nos nas redes sociais!</p>
+
+        <div>
+            <img src="https://image.flaticon.com/icons/png/512/25/25305.png" width="40" />
+            <img src="https://image.flaticon.com/icons/png/512/25/25425.png" width="40" />
+            <img src="https://image.flaticon.com/icons/png/512/8/8800.png" width="40" />
+        </div>
+    </footer>
+</body>
+
+</html>
