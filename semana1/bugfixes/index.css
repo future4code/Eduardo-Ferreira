@@ -27,6 +27,10 @@ input {
     width: 500px;
 }
 
+input:focus {
+    outline: none;
+}
+
 button:focus {
     color: white;
     outline: none;
@@ -69,6 +73,14 @@ div img {
 
 .icone {
     height: 20px;
+}
+
+.search:hover {
+    opacity: 0.4;
+}
+
+.search:active {
+    opacity: 1;
 }
 
 
