@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EEEFED;
+}
+
+/****************** Menu *******************/
+
+.menu {
+    margin-top: 120px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu li {
+    max-width: 140px;
+    position: relative;
+    padding: 0 12px 0 12px;
+    text-align: center;
+}
+
+.menu li a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.menu li span {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.menu li:hover span {
+    color: coral;
+}
+
+.menu li:hover span::before {
+    background-color: coral;
+}
+
+.menu span::after {
+    content: "";
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 4px;
+    background-color: #000;
+    margin: 0 auto;
+    bottom: -10px;
+}
+
+.menu span::before {
+    margin: 8px auto;
+    display: flex;
+    position: relative;
+    content: "";
+    background-position: center;
+    background-size: 44px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    z-index: 998;
+}
+
+
+.menu span.icon-index::before {
+    background-image: url("../../images/home.png");
+}
+
+.menu span.icon-estoque::before {
+    background-image: url("../../images/factory-stock-house.png");
+}
+
+.menu span.icon-produto::before  {
+    background-image: url("../../images/produto2.png");
+}
+
+.menu span.icon-funcionarios::before  {
+    background-image: url("../../images/employees.png");
+}
+
+.menu span.icon-vendas::before  {
+    background-image: url("../../images/vendas.jpg");
+}
+
+.menu span.icon-relatorio::before  {
+    background-image: url("../../images/relatorio-vendas.png");
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    margin: 60px auto;
+    text-align: center;
+    width: 700px;
+}
+
+.header {   
+    height: 70px;
+    text-align: center;
+    background: rgb(0,28,105);
+    background: linear-gradient(90deg, rgba(0,28,105,1) 0%, rgba(9,85,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.logotipo {
+    padding: 30px 50px;
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 5px solid #003366;
+}
+
+.logotipo p {
+    padding-top: 10px;
+}
+
+
+.footer {
+    margin-top: 180px;
+    position: relative;
+    text-align: center;
+    background: rgb(0,28,105);
+    background: linear-gradient(90deg, rgba(0,28,105,1) 0%, rgba(9,85,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 20px 0;
+}
+
+.footer p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer img {
+    margin: 20px;
+}
+
+/*************** Funcionários ****************/
+
+
+
+/*************** Estoque ****************/
+
+.estoque table {
+    margin: 40px auto;
+}
+
+/*************** Produtos ****************/
+
+.produtos {
+    position: relative;
+    margin: 80px auto;
+    width: 680px;
+}
+
+.produtos  .form-produtos {
+    position: relative;
+    margin-top: 0px;
+    margin: 30px auto;
+}
+
+.produtos  .form-produtos div {
+    margin-bottom: 30px;
+}
+
+.produtos  .form-produtos h2 {
+    text-align: center;
+}
+
+.produtos label {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #888;
+    line-height: 50px;
+}
+
+.produtos input {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    padding: 10px;;
+}
+
+/*************** FIM PRODUTOS ****************/
+
+.form-add {
+    padding-top: 40px;
+    text-align: center;
+}
+
+button {
+    border: 0;
+    padding: 20px;
+    background-color: #04A6CE;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 20px 0;
+}
+
+select {
+    width: 300px;
+    padding: 10px;
+}
+
+
+/*************** ADD PRODUTO ****************/
+
+.add-vendas .form-cadastrar {
+    margin: 40px auto;
+    width: 400px;
+}
+
+.add-vendas input, .add-vendas select {
+    float: right;
+    width: 70%;
+    height: 46px;
+    border: 0;
+    text-align: right;
+    border: 1px solid #d7d7d7;
+}
+
+.add-vendas label {
+    box-sizing: border-box;
+    height: 46px;
+    float: left;
+    display: block;
+    width: 30%;
+    background-color: #02BFE9;
+    text-align: left;
+    border: 1px solid #02A0C1;
+    border-bottom: 2px solid #0291AE;
+    border-top: 1px solid #30DAFE;
+    padding-left: 10px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #000;
+}
+
+.add-vendas button {
+    margin-top: 60px;
+}
+
+.produto-vendido {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.produto-vendido .titulo {
+    text-align: left;
+    width: 100%;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 3px solid #d7d7d7;
+    padding-bottom: 6px;
+}
+
+.produto-vendido div > div {
+    position: relative;
+    line-height: 40px;
+    height: 40px;
+}
+
+.produto-vendido > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 14px;
+    padding: 4px 0 20px 0;
+    border-bottom: 4px solid #04A6CE;
+    height: 120px;
+}
+
+.produto-vendido div > span {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.produto-vendido div:first-of-type span {
+    text-align: left;
+}
+
+.produto-vendido div span {
+    text-align: right;
+}
+
+/*************** HISTORICO VENDAS ****************/
+
+.form-historico {
+    margin: 40px auto;
+}
+
+.form-historico .periodo input {
+    padding: 10px;
+}
+
+.periodo {
+    width: 200px;
+}
