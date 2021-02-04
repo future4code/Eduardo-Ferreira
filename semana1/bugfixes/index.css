@@ -29,6 +29,7 @@ input {
 
 button:focus {
     color: white;
+    outline: none;
 }
 
 button:hover {
@@ -90,6 +91,7 @@ div img {
 }
 
 #container-de-descricao>ol {
+    display: block;
     padding: 15px 0px;
     list-style-position: inside;
 }
