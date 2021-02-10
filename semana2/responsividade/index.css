@@ -1,0 +1,51 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#main-container > div > div {
+    border: 1px solid black;
+    margin: 20px 10px 0 10px;
+}
+
+#first-block {
+    background-color: red;
+}
+
+.blue-block {
+    background-color: blue;
+}
+
+.yellow-block {
+    background-color: yellow;
+}
+
+.green-block {
+    background-color: green;
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+}
+
+.white-block {
+    background-color: white;
+}
+
+#main-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+}
+
+#main-container > :nth-child(1) { flex-grow: 1; height: 100px; }
+#main-container > :nth-child(2), #main-container > :nth-child(3) { flex-grow: 1; display: flex; flex-flow: row wrap; }
+#main-container > :nth-child(2) > div, #main-container > :nth-child(3) > div { height: 200px; width: 18rem; display: flex; justify-content: center; align-items: center; flex-grow: 2;}
+#main-container > :nth-child(4) { flex-grow: 2; display: flex; flex-flow: row wrap; }
+#main-container > :nth-child(4) > div { display: flex; justify-content: center; align-items: center; height: 400px; flex-grow: 1; width: 18rem; }
+#main-container > :nth-child(5) { display: flex; flex-flow: row wrap; flex-grow: 1; padding-bottom: 120px; }
+#main-container > :nth-child(5) > div { display: flex; justify-content: center; align-items: center; height: 200px; width: 18rem; flex-grow: 1; }
