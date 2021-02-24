@@ -148,11 +148,17 @@ if (gameStep === 'SF') {
     }
 }
 
+const dol = "$ ";
+const real = "R$ ";
+let cipher;
+
 if (typeGame === 'DO') {
     typeGame = "Jogo Nacional";
+    cipher = real;
 } else {
     typeGame = "Jogo Internacional";
     price *= 4.10;
+    cipher = dol;
 }
 
 console.log("--- Dados da Compra ---");
@@ -162,5 +168,5 @@ console.log("Etapa do jogo: " + gameStep);
 console.log("Categoria: " + category);
 console.log("Quantidade de Ingressos: " + numberTickets);
 console.log("--- Valores ---");
-console.log("Valor do ingresso: " + "R$ " + (price));
-console.log("Valor total: " + "R$ " + (price * numberTickets));
+console.log("Valor do ingresso: " + cipher + (price));
+console.log("Valor total: " + cipher + (price * numberTickets));
