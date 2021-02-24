@@ -101,7 +101,6 @@ let category = Number(prompt("Digite a categoria do jogo! Ex.: 1,2,3 ou 4"));
 let numberTickets = Number(prompt("Digite a quantidade de ingressos"));
 let price;
 
-typeGame = "Jogo Nacional";
 if (gameStep === 'SF') {
     switch (category) {
         case 1:
