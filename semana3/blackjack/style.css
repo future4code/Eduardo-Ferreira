@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.game-container {
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 600px;
+    background-color: #280;
+}
+
+.card-container {
+    justify-content: center;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+}
+
+.card-container .cards {
+    margin-left: 10px;
+    background-color: rgb(102, 102, 0);
+    height: 100px;
+    width: 80px;
+}
+
+.dealer span, .player span {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.player span {
+    padding-top: 20px;
+}
+
+.score {
+    display: block;
+    padding: 20px 0;
+}
+
+.botoes {
+    margin: 0 auto;
+}
+
+.botoes a {
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+    color: #fff;
+}
