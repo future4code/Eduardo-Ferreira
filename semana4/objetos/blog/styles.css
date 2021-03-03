@@ -49,3 +49,26 @@ button {
     padding: 20px 0;
     text-align: center;
 }
+
+.posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.posts > div {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 8px;
+    max-width: 800px;
+}
+
+.posts > div {
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+.posts img {
+    padding: 20px 0;
+    width: 100%;
+}
