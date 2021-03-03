@@ -64,8 +64,17 @@ button {
 }
 
 .posts > div {
+    text-align: center;
     display: inline-block;
     padding-bottom: 30px;
+}
+
+.posts div i, .posts div p {
+    text-align: left;
+}
+
+.posts div h1, .posts div span, .posts div i, .posts div p {
+    display: inline-block;
 }
 
 .posts img {
