@@ -123,55 +123,45 @@ function comparaDoisNumeros(num1, num2) {
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   let i = 0;
-   let maiorNum = 0;
-   let maiores = [];
-   let segundoMaiorMenor = [];
+   const newArr = [];
+   let num = 0
+   let n = array.length;
 
-   while (i < (array.length - 1)) {
-      if (array[maiorNum] < array[i + 1]) {
-         maiores.push(array[maiorNum]);
-         maiorNum = i + 1;
-      } else {
-         if (maiores[maiores.length - 1] > array[i + 1]) {
-            let indice = maiores.splice(maiores.length - 1, 1)[0];
-            maiores.push(array[i + 1]);
-            maiores.push(indice);
-         } else {
-            maiores.push(array[i + 1]);
+   while (n > 0) {
+      for (let i = 0; i < n; i++) {
+         if (array[num] > array[i + 1]) {
+            num = i + 1;
          }
       }
-      i++;
+      num = array.splice(num, 1);
+      newArr.push(num[0]);
+      n = array.length;
+      num = 0;
    }
-   maiores.push(array[maiorNum]);
-   segundoMaiorMenor.push(maiores[maiores.length - 2]);
-   segundoMaiorMenor.push(maiores[1]);
-
-   return segundoMaiorMenor;
+   const segundoMaiorEmenor = []
+   segundoMaiorEmenor.push(newArr[newArr.length - 2],newArr[1]);
+   return segundoMaiorEmenor;
 }
 
-function ordenaArray(array) {
-   let i = 0;
-   let maiorNum = 0;
-   let maiores = [];
+// Exercício 11
 
-   while (i < (array.length - 1)) {
-      if (array[maiorNum] < array[i + 1]) {
-         maiores.push(array[maiorNum]);
-         maiorNum = i + 1;
-      } else {
-         if (maiores[maiores.length - 1] > array[i + 1]) {
-            let indice = maiores.splice(maiores.length - 1, 1)[0];
-            maiores.push(array[i + 1]);
-            maiores.push(indice);
-         } else {
-            maiores.push(array[i + 1]);
+function ordenaArray(array) {
+   const newArr = [];
+   let num = 0
+   let n = array.length;
+
+   while (n > 0) {
+      for (let i = 0; i < n; i++) {
+         if (array[num] > array[i + 1]) {
+            num = i + 1;
          }
       }
-      i++;
+      num = array.splice(num, 1);
+      newArr.push(num[0]);
+      n = array.length;
+      num = 0;
    }
-   console.log(maiores);
-   return maiores;
+   return newArr;
 }
 
 // Exercício 12
@@ -334,8 +324,8 @@ const consultas = [
 function retornaEmailConsulta() {
    const mensagens = []
    for (let i = 0; i < consultas.length; i++) {
-      if (consultas[i].cancelada == true) {
-         mensagens.push(`Olá, ${consultas[i].genero == "masculino" ? "Sr." : "Sra."} ${consultas[i].nome}. Estamos enviando esta mensagem para ${consultas[i].genero == "masculino" ? "lembrá-lo" : "lembrá-la"} ${consultas[i].nome} da sua consulta no dia ${consultas[i].dataDaConsulta}. Por favor, acuse o recebimento deste-email.`)
+      if (consultas[i].cancelada == false) {
+         mensagens.push(`Olá, ${consultas[i].genero == "masculino" ? "Sr." : "Sra."} ${consultas[i].nome}. Estamos enviando esta mensagem para ${consultas[i].genero == "masculino" ? "lembrá-lo" : "lembrá-la"} da sua consulta no dia ${consultas[i].dataDaConsulta}. Por favor, acuse o recebimento deste-email.`)
       } else {
          mensagens.push(`Olá, ${consultas[i].genero == "masculino" ? "Sr." : "Sra."} ${consultas[i].nome}. Infelizmente sua consulta marcada para o dia ${consultas[i].dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la.`);
       }
