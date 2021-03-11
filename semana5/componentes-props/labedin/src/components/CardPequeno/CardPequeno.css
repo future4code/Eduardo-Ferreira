@@ -1,0 +1,39 @@
+.smallcard-container > div {
+  border: 1px solid #000;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.smallcard-container > div:first-of-type {
+  margin-bottom: 10px;
+}
+
+.smallcard-container > div > div {
+  display: flex;
+  align-items: center;
+}
+
+.smallcard-container div b {
+  margin-left: 10px;
+}
+
+.smallcard-container .icon::before {
+  position: relative;
+  margin-right: 10px;
+  left: 10px;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.smallcard-container .email::before {
+  content: "";
+  background-image: url("https://image.flaticon.com/icons/png/512/91/91848.png");
+}
+
+.smallcard-container .endereco::before {
+  content: "";
+  background-image: url("https://freepikpsd.com/wp-content/uploads/2019/10/icone-endere%C3%A7o-png-Transparent-Images.png");
+}
