@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
