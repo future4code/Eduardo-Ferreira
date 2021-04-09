@@ -1,21 +1,14 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
+export const Animation = styled.div`
+    position: relative;
+    left: 0;
+    ${({animationDirection}) => (animationDirection)};
+`
 
 export const MainContainer = styled.div`
     text-align: center;
     background-image: url("");
-    & button {
-        color: #fff;
-        margin-top: 40px;
-        border: 0;
-        padding: 14px;
-    }
-    & button:first-of-type {
-        background: red;
-    }
-    & button:last-of-type {
-        background: green;
-        margin-left: 20px;
-    }
 `   
 
 export const MainContent = styled.div`

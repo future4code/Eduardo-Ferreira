@@ -10,6 +10,7 @@ export const MatchsProvider = ({ children }) => {
     const addMatch = (body) => {
         ChoosePerson(body).then((res) => {
             setMatchs(!matchs)
+            console.log(res);
         })
     }
     

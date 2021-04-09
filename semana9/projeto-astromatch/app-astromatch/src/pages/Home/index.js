@@ -1,41 +1,77 @@
 import React, { useContext, useEffect, useState } from 'react'
-import * as c from './style'
+import { Animation, HeaderContainer } from './style'
 import { MatchsContext } from "../../store/index"
 import { GetProfileToChoose } from "../../services/api";
+import { Spinner, Buttons } from "../../styles/styles";
+import PersonCard from "../../components/PersonCard/index"
+
+import {ClearApi} from "../../services/api";
+
+ClearApi().then((res) => {
+    console.log(res);
+})
 
 const Home = () => {
+    const [animation, setAnimation] = useState({});
+    const [loading, setLoading] = useState(true);
     const [profile, setProfile] = useState([]);
     const [matchs, setMatchs, addMatch] = useContext(MatchsContext);
-
+    
     useEffect(() => {
         GetProfileToChoose().then((res) => {
             setProfile(res.data.profile);
+            setLoading(false);
+            setAnimation({
+                opacity: '1',
+                left: '0',
+                transition: ' all 0.4s ease',
+            });
         });
     }, [matchs])
+    console.log(profile);
+    const handleAnimation = (booelan) => {
+        if (booelan === false) {
+            setAnimation({
+                transform: 'rotate(-26deg)',
+                opacity: '0',
+                left: '-150px',
+                transition: 'all 0.2s ease',
+            });
+        } else {
+            setAnimation({
+                transform: 'rotate(26deg)',
+                opacity: '0',
+                left: '150px',
+                transition: 'all 0.2s ease',
+            });
+        }
+        handleProfiles(booelan);
+    }
 
-    const handleProfiles = (boolean) => {
+    const handleProfiles = (boolean, id) => {
+        setLoading(true);
         const body = {
-            "id": "71gMbZs2txS9LDvGK5Ew",
+            "id": profile.id,
             "choice": boolean
         }
         addMatch(body);
+    }
 
+    const openMatchs = () => {
+        console.log("Abrir")
     }
 
     return (
-        <c.MainContainer>
-            <c.MainContent photo={profile.photo}>
-                <c.NameAgeDesc>
-                    <c.NameAge>
-                        <h4>{profile.name}</h4>
-                        <span>{profile.age}</span>
-                    </c.NameAge>
-                    <c.Description>{profile.bio}</c.Description>
-                </c.NameAgeDesc>
-            </c.MainContent>
-            <button onClick={() => handleProfiles(false)}>false</button>
-            <button onClick={() => handleProfiles(true)}>true</button>
-        </c.MainContainer>
+        <>
+            {loading && <Spinner load={loading} />}
+            <Animation animationDirection={animation}>
+                <PersonCard profile={profile} />
+            </Animation>
+            <Buttons>
+                <button onClick={() => handleAnimation(false)}>false</button>
+                <button onClick={() => handleAnimation(true)}>true</button>
+            </Buttons>
+        </>
     )
 }
 
