@@ -32,10 +32,17 @@ export const MainContent = styled.div`
 `
 
 export const NameAgeDesc = styled.div`
-    color: #fff;
+    color: #000;
     position: absolute;
     bottom: 0;
-    padding: 20px 20px;
+    padding: 20px;
+    margin: 15px;
+    width: 90%;
+    border-radius: 6px;
+    background: rgba(255,255,255, 0.9);
+    & span {
+        margin-left: 5px;
+    }
 `
 
 export const NameAge = styled.div`

@@ -5,13 +5,14 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     text-decoration: none;
     list-style: none;
   }
 
   body {
-    background: ${props => props.theme.colors.secundary};
+    background: rgb(65,56,148);
+    background: linear-gradient(90deg, rgba(65,56,148,1) 0%, rgba(104,114,189,1) 0%, rgba(74,5,164,1) 100%);
     overflow: hidden;
   }
 `;
@@ -46,27 +47,39 @@ export const Spinner = styled.div`
   transition: all 0.3s ease;
 `
 export const Buttons = styled.div`
+  display: flex;
+  justify-content: space-around;
   & button {
-        color: #fff;
+        cursor: pointer;
+        font-size: 3em;
+        color: red;
         margin: 20px 0;
         border: 0;
-        padding: 14px;
+        background: inherit;
     }
     & button:first-of-type {
-        background: red;
+      color: #888;
     }
     & button:last-of-type {
-        background: green;
-        margin-left: 20px;
+      color: darkred;
+      background: rgb(255,136,0);
+      background: linear-gradient(180deg, rgba(255,136,0,1) 0%, rgba(255,0,0,1) 35%, rgba(136,0,0,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    & button:focus {
+      outline: none;
     }
 `
 
 export const MainContainer = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
   position: relative;
   text-align: center;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 8px #000;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);;
   width: 310px;
-  height: 540px;
+  height: 560px;
 `

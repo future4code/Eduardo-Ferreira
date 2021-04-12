@@ -9,7 +9,7 @@ import { Matchs } from "./pages/Matchs/index"
 function App() {
   
   const [page, setPage] = useState('home');
- 
+  
   const changePage = () => {
     if(page === 'home'){
       return <Home />
@@ -25,7 +25,7 @@ function App() {
           <MatchsProvider>
             <GlobalStyle />
             <MainContainer>
-              <NavBar menu={setPage}/>
+              <NavBar menu={setPage} page={page}/>
               {changePage()}
             </MainContainer>
           </MatchsProvider>

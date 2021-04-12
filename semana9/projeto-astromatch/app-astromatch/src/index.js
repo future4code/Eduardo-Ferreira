@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { MatchsProvider } from "./store/index";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MatchsProvider>
+      <App />
+    </MatchsProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

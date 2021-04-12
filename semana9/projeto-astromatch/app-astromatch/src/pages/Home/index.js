@@ -9,8 +9,8 @@ import {ClearApi} from "../../services/api";
 
 ClearApi().then((res) => {
     console.log(res);
-})
-
+})   
+ 
 const Home = () => {
     const [animation, setAnimation] = useState({});
     const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ const Home = () => {
             });
         });
     }, [matchs])
-    console.log(profile);
+
     const handleAnimation = (booelan) => {
         if (booelan === false) {
             setAnimation({
@@ -68,8 +68,8 @@ const Home = () => {
                 <PersonCard profile={profile} />
             </Animation>
             <Buttons>
-                <button onClick={() => handleAnimation(false)}>false</button>
-                <button onClick={() => handleAnimation(true)}>true</button>
+                <button className="material-icons" onClick={() => handleAnimation(false)}>sentiment_very_dissatisfied</button>
+                <button className="material-icons" onClick={() => handleAnimation(true)}>sentiment_very_satisfied</button>
             </Buttons>
         </>
     )

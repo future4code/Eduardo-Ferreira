@@ -1,21 +1,21 @@
 import React, { useState, createContext, useEffect } from "react";
-import { ChoosePerson } from "../services/api";
+import { ChoosePerson, GetMatches } from "../services/api";
 
 export const MatchsContext = createContext();
 
 export const MatchsProvider = ({ children }) => {
     
-    const [matchs, setMatchs] = useState([]);
-    
+    const [matchs, setMatchs] = useState(true);
+    const [getMatches, setMatches] = useState([]);
+
     const addMatch = (body) => {
         ChoosePerson(body).then((res) => {
             setMatchs(!matchs)
-            console.log(res);
         })
     }
-    
+
     return (
-        <MatchsContext.Provider value={[matchs, setMatchs, addMatch]}>
+        <MatchsContext.Provider value={[matchs, setMatchs, addMatch, getMatches, setMatches]}>
             {children}
         </MatchsContext.Provider>
     )
