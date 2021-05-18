@@ -25,4 +25,4 @@ switch (operation) {
     result = Number(firstValue) / Number(secondValue);
 }
 
-console.log(`Resultado: ${resultOperation}`);
+console.log(`Resultado: ${result}`);

@@ -6,7 +6,7 @@
     A lista de tarefas pode estar criada antes da execução do código. Após adicionar o item à lista, exiba a lista atualizada.
     */
 
-const task = ["Realizar atividades do Curso", "Estudar francês"];
+const task = ["Treinar boxe"];
 
 const newTask = process.argv[2];
 
