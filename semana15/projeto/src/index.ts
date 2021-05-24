@@ -5,6 +5,7 @@ import { users } from './mock/users'
 
 const birthdayAge = require('./helpers/birthday')
 const getUserBycpf = require('./helpers/getUserBycpf')
+const getDeposit = require('./helpers/deposit')
 
 const app = express()
 app.use(express.json())
@@ -67,6 +68,7 @@ app.put('/client/deposit', (req: Request, res: Response) => {
       throw new Error('Nome do cliente inválido!')
     }
     data.balance = value
+    data.statement = [...data.statement, getDeposit(value)]
     res.send(data)
   } catch (error) {
     res.send(error.message)

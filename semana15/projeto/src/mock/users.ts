@@ -1,6 +1,6 @@
 export type Extract = {
   amount: number
-  date: number
+  date: string
   description: string
 }
 
@@ -20,22 +20,14 @@ export const users: User[] = [
     doc: "016.640.800-07",
     birthday: "01/12/1958",
     balance: 0,
-    statement: [{
-      amount: 5000,
-      date: 2105215089068,
-      description: "Deposito de Dinheiro"
-    }]
+    statement: []
   },
   {
     name: "teste",
     doc: "016.640.800-07",
     birthday: "01/12/1958",
     balance: 0,
-    statement: [{
-      amount: 5000,
-      date: 2105215089068,
-      description: "Deposito de Dinheiro"
-    }]
+    statement: []
   }
 ]
 
