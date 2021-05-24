@@ -8,25 +8,35 @@ app.use(express.json())
 app.use(cors())
 
 app.post('/register', (req: Request, res: Response) => {
+  
+  const birthdayAge = require('./helpers/birthday')
+  let result = users
+  const { name, doc, birthday } = req.body
+  const newClient = { name, doc, birthday }
 
-  const { name, doc, birthday, balance } = req.body
-  const newClient = { name, doc, birthday, balance }
-
-  //users.push(newClient)
+  birthdayAge('23/05/1992');
   try {
-    for (const values of users) {
-      if (values.doc === req.body.doc) {
-        res.send('usuário já existe')
+    if(birthdayAge(birthday) < 18){
+      throw new Error('Ooops! Você ainda não é maior de idade! :)')
+    }
+    for (const values of users){
+      if (values.doc === doc) {
         throw new Error('Usuário já existe')
       }
-
-      users.push(newClient)
-      res.send('Usuário cadastrado com sucesso!')
     }
+    result.push(newClient)
+    res.send('Usuário cadastrado')
   } catch(error) {
     res.send(error.message)
   }
-  //res.send(req.body.doc)
+})
+
+app.post('/search', (req: Request, res: Response) => {
+  try{
+    
+  }catch{
+
+  } 
 })
 
 app.get('/clients', (req: Request, res: Response) => {
