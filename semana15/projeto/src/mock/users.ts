@@ -1,10 +1,10 @@
-type Extract = {
+export type Extract = {
   amount: number
   date: number
   description: string
 }
 
-type User = {
+export type User = {
   name: string
   doc: string
   birthday: string

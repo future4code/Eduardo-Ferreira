@@ -16,7 +16,6 @@ const birthdayAge = (date: string): number => {
   }else{
     if(getCurrentDay === arrayDate[0]){
       age = (getCurrentYear - arrayDate[2]) + 1
-      console.log('aniversario')
     }else if(getCurrentDay > arrayDate[0]){
       age = (getCurrentYear - arrayDate[2])
     }else{
