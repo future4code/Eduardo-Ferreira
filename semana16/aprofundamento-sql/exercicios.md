@@ -52,3 +52,10 @@ a. DELETE FROM Actor WHERE name = "Fernanda Montenegro"
 ``` sql
 b. DELETE FROM Actor WHERE gender = "male" AND salary > 1000000
 ```
+
+<br>
+
+## Exercício 4
+___
+<br>
+
