@@ -2,15 +2,19 @@
 ## Exercício 1 
 ___
 <br>
-a.
-` SHOW DATABASES` -> imprime como resultado o nome do bando de dados. <br><br>
-b.` SHOW TABLES` -> imprime as tabelas existentens no banco de dados
-<br><br>
+
+a.` SHOW DATABASES` -> imprime como resultado o nome do bando de dados. <br>
+
+b.` SHOW TABLES` -> imprime as tabelas existentens no banco de dados<br><br>
+
+
 ## Exercício 2
 ___
 <br>
 a. Escreva uma query que crie a atriz Glória Pires, com o id 002, salário R$1.200.000 e data de nascimento 23 de Agosto de 1963
+
 <br>
+
 ```sql
 INSERT INTO Actor (id, name, salary, birth_date, gender)
 VALUES(
@@ -82,5 +86,28 @@ c. SELECT * from Actor WHERE gender = ""
 d. SELECT id, name, salary from Actor WHERE salary <= 500000
 ````
 ````sql
-e. SELECT * FROM Actor WHERE gender = "female
+A coluna não foi encontrada, erro em "nome"
+
+e. SELECT id, name from Actor WHERE id = "002"
 ````
+
+<br>
+
+## Exercício 4
+___
+<br>
+
+a. A query está selecionando todas as colunas na tabela Actor onde a coluna 'name' comece com a letra 'A' ou 'J' e 'salary' seja superior a 300000.
+
+
+```sql
+b. SELECT * FROM Actor WHERE ( name NOT LIKE 'A%') AND salary > 350000
+```
+
+```sql
+c. SELECT * FROM Actor WHERE ( name LIKE '%G%' OR name LIKE '%g%')
+```
+
+```sql
+d. SELECT * FROM Actor WHERE ( name LIKE '%a%' OR name LIKE '%A%' OR name LIKE '%g%' OR name LIKE '%G%') AND salary >= 350000 AND salary <= 900000
+```
