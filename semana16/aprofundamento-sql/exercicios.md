@@ -93,3 +93,25 @@ d. SELECT * FROM Actor ORDER BY salary DESC LIMIT 3
 ``` sql
 e. SELECT AVG(salary), gender FROM Actor GROUP BY gender 
 ```
+
+<br>
+
+## Exercício 6
+___
+<br>
+
+``` sql
+a. ALTER TABLE Films ADD playing_limit_date DATE DEFAULT "2015-10-05"
+```
+``` sql
+b. ALTER TABLE Films CHANGE rating rating FLOAT
+```
+``` sql
+c. UPDATE Films SET playing_limit_date = "2016-01-01" WHERE playing_limit_date = "2015-10-05" ORDER BY title ASC LIMIT 2
+```
+``` 
+d. Registros afetados: 0  Registros encontrados: 0
+
+O sql não está retornando erros quando tento excluir conteúdo de linhas com o 'id' inexistente. Porém, nenhum registro é afetado.
+
+```
