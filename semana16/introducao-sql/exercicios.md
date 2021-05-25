@@ -111,3 +111,61 @@ c. SELECT * FROM Actor WHERE ( name LIKE '%G%' OR name LIKE '%g%')
 ```sql
 d. SELECT * FROM Actor WHERE ( name LIKE '%a%' OR name LIKE '%A%' OR name LIKE '%g%' OR name LIKE '%G%') AND salary >= 350000 AND salary <= 900000
 ```
+
+<br>
+
+## Exercício 5
+___
+<br>
+
+```sql
+a. CREATE TABLE Films (
+    id VARCHAR(11) PRIMARY KEY,
+    title VARCHAR (255) NOT NULL,
+    sinopse TEXT NOT NULL,
+    release_film DATE NOT NULL,
+    rating VARCHAR(2) NOT NULL
+);
+
+```
+
+<br>
+
+## Exercício 6
+___
+<br>
+
+```sql
+a. SELECT id, title, rating FROM Films WHERE id = 001
+```
+
+```sql
+b. SELECT * FROM Films WHERE title = "Se eu fosse você"
+```
+
+```sql
+c. SELECT id, title, sinopse FROM Films WHERE rating >= 7
+```
+
+<br>
+
+## Exercício 7
+___
+<br>
+
+
+```sql
+a. SELECT * FROM Films WHERE title LIKE '%vida%'
+```
+
+```sql
+b. SELECT * FROM Films WHERE sinopse LIKE '%Cláu%'
+```
+
+```sql
+c. SELECT id, title, sinopse FROM Films WHERE rating >= 7
+```
+
+```sql
+d. SELECT * FROM Films WHERE release_film >= '2015-05-15' AND title LIKE "%a%" AND rating > 7
+```
