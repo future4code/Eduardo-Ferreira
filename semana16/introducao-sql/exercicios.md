@@ -1,14 +1,16 @@
-#  Banco de Dados e Introdução a SQL - Exercícios aula 45 <h2>
-## Exercício 1
-
+#  Banco de Dados e Introdução a SQL - Exercícios aula 45 
+## Exercício 1 
+___
+<br>
 a.
 ` SHOW DATABASES` -> imprime como resultado o nome do bando de dados. <br><br>
 b.` SHOW TABLES` -> imprime as tabelas existentens no banco de dados
-
+<br><br>
 ## Exercício 2
-
+___
+<br>
 a. Escreva uma query que crie a atriz Glória Pires, com o id 002, salário R$1.200.000 e data de nascimento 23 de Agosto de 1963
-
+<br>
 ```sql
 INSERT INTO Actor (id, name, salary, birth_date, gender)
 VALUES(
@@ -61,4 +63,24 @@ VALUES(
 );
 ```
 
-f. 
+f. Criar mais 2 atores para o próximo exercíco. Checked.
+<br><br>
+## Exercício 3
+___
+<br>
+
+````sql
+a. SELECT * FROM Actor WHERE gender = "female
+````
+````sql
+b. SELECT salary from Actor WHERE name = "Tony Ramos"
+````
+````sql
+c. SELECT * from Actor WHERE gender = ""
+````
+````sql
+d. SELECT id, name, salary from Actor WHERE salary <= 500000
+````
+````sql
+e. SELECT * FROM Actor WHERE gender = "female
+````
