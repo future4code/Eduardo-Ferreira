@@ -59,3 +59,37 @@ b. DELETE FROM Actor WHERE gender = "male" AND salary > 1000000
 ___
 <br>
 
+``` sql
+a. SELECT MAX(salary) FROM Actor 
+```
+``` sql
+a. SELECT MAX(salary) FROM Actor WHERE gender="female"
+```
+``` sql
+a. SELECT COUNT(*) FROM Actor WHERE gender="female"
+```
+``` sql
+a. SELECT SUM(salary) FROM Actor
+```
+
+<br>
+
+## Exercício 5
+___
+<br>
+
+``` 
+a. A query está executando um contador apenas para a coluna 'gender' e agrupando a soma de acordo com os gender existentes.
+```
+``` sql
+b. SELECT id, name FROM Actor ORDER BY name Desc
+```
+``` sql
+c. SELECT * FROM Actor ORDER BY salary Asc
+```
+``` sql
+d. SELECT * FROM Actor ORDER BY salary DESC LIMIT 3
+```
+``` sql
+e. SELECT AVG(salary), gender FROM Actor GROUP BY gender 
+```
