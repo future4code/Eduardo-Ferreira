@@ -140,3 +140,22 @@ e. SELECT MAX(rating) FROM Films
 ``` sql
 f. SELECT MIN(rating) FROM Films
 ```
+
+<br>
+
+## Exercício 8
+___
+<br>
+
+``` sql
+a. SELECT * FROM Films ORDER BY Title
+```
+``` sql
+b. SELECT * FROM Films ORDER BY Title DESC LIMIT 5
+```
+``` sql
+c. SELECT * FROM Films ORDER BY release_film DESC LIMIT 3
+```
+``` sql
+d. SELECT * FROM Films ORDER BY rating DESC LIMIT 3
+```
