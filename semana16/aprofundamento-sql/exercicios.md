@@ -115,3 +115,28 @@ d. Registros afetados: 0  Registros encontrados: 0
 O sql não está retornando erros quando tento excluir conteúdo de linhas com o 'id' inexistente. Porém, nenhum registro é afetado.
 
 ```
+
+<br>
+
+## Exercício 7
+___
+<br>
+
+``` sql
+a. SELECT COUNT(rating) FROM Films WHERE rating > 7.5 AND playing_limit_date > "2014-06-12"
+```
+``` sql
+b. SELECT AVG(rating) FROM Films
+```
+``` sql
+c. SELECT COUNT(*) FROM Films WHERE playing_limit_date > "2014-05-06"
+```
+```
+d. --------- '' ----------
+```
+``` sql
+e. SELECT MAX(rating) FROM Films
+```
+``` sql
+f. SELECT MIN(rating) FROM Films
+```
