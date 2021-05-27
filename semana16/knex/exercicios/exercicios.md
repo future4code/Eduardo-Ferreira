@@ -37,3 +37,64 @@ const search = async (gender: string): Promise<void> => {
     }
   }
 ```
+
+<br>
+
+## Exercício 2
+___
+<br>
+
+a. 
+
+```js
+const update = async (id: string, salary: number) => {
+    try{
+      await connection({a: 'Actor'})
+        .where({ id: `${id}`})
+        .update({salary: 3333})
+        console.log('ok')
+    }catch(error){
+      console.log('Error')
+    }
+  }
+```
+
+b. 
+
+```js
+const update = async (id: string) => {
+    try{
+      await connection({a: 'Actor'})
+        .where({ id: `${id}`})
+        .del()
+        console.log('ok')
+    }catch(error){
+      console.log('Error')
+    }
+  }
+```
+
+c. 
+
+```js
+const data = async (gender: string) => {
+    try {
+      return await connection({ a: 'Actor' })
+        .avg('salary')
+        .where('gender', '=', `${gender}`)
+        console.log('ok')
+    } catch (error) {
+      console.log('Error')
+    }
+  }
+```
+
+<br>
+
+## Exercício 3
+___
+<br>
+
+```js
+a.
+```

@@ -35,3 +35,58 @@ app.get("/actors", (req: Request, res: Response) => {
 app.listen(3000, () => {
   console.log('Servidor rodando')
 })
+
+
+app.put("/actor/update", (req: Request, res: Response) => {
+
+  const update = async (id: string, salary: number) => {
+    try {
+      await connection({ a: 'Actor' })
+        .where({ id: `${id}` })
+        .update({ salary: 3333 })
+      console.log('ok')
+    } catch (error) {
+      console.log('Error')
+    }
+  }
+
+  update('001', 6659999)
+  res.end()
+})
+
+app.delete("/actor/delete", (req: Request, res: Response) => {
+
+  const update = async (id: string) => {
+    try {
+      await connection({ a: 'Actor' })
+        .where({ id: `${id}` })
+        .del()
+      console.log('ok')
+    } catch (error) {
+      console.log('Error')
+    }
+  }
+
+  update('001')
+  res.end()
+})
+
+
+app.get("/actor/avg", (req: Request, res: Response) => {
+
+  const data = async (gender: string) => {
+    try {
+      return await connection({ a: 'Actor' })
+        .avg('salary')
+        .where('gender', '=', `${gender}`)
+        console.log('ok')
+    } catch (error) {
+      console.log('Error')
+    }
+  }
+
+  data('male').then((res) => {
+    console.log(res);
+  })
+  res.end()
+})
