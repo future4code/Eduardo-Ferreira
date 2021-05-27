@@ -1,5 +1,8 @@
+import express, { Request, Response } from "express";
 import knex from "knex"
 require('dotenv').config()
+
+const app = express()
 
 const connection = knex({
   client: 'mysql',
@@ -11,10 +14,24 @@ const connection = knex({
   }
 });
 
-/* if(knex){
-  console.log(knex)
-} */
+app.get("/actors", async (req: Request, res: Response) => {
 
-connection({a:'Actor'}).select({ title: 'a.title' })
+  try{
+    const result = await connection({a:'Actor', b:'Films'})
+    .select({ 
+      actor_name: 'a.name', 
+      film_title: 'b.title' 
+    })
+    console.log(result)
+  }catch(error){
+    console.log(error.message)
+    res.send("Erro!")
+  } 
 
-console.log();
+
+  res.end()
+})
+
+app.listen(3000, () => {
+  console.log('Servidor rodando')
+})
