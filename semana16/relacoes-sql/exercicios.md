@@ -28,4 +28,21 @@ e. Ao tentar deletar um filme que possue dados inseridos em sua tabela de refer�
 
 ## Exercício 2
 ***
-a.
+a. A tabela está criando uma relação de N:M, ou seja, um filme poderá ter uma relação com multiplos atores, assim como atores, poderão ter uma relação com multiplos filmes.
+
+```sql
+b.
+
+INSERT INTO MovieCast 
+(movie_id, actor_id) VALUES
+("003", "004"),
+("003", "005"),
+("005", "005"),
+("002", "004"),
+("002", "003"),
+("003", "004")
+```
+
+c. Ao tentar criar uma relação com uma com um ator inexistente, o SQL retorna um erro. O erro diz que não possível atualizar uma 'linha' filho, pois a uma restrição de chave estrangeira que falhou.
+
+d. Ao tentar deletar um ator que possue dados inseridos em sua tabela de referência, o SQL retorna um erro. O erro diz que não possível atualizar uma 'linha' pai, pois a uma restrição de chave estrangeira que falhou.
