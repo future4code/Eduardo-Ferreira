@@ -46,3 +46,15 @@ INSERT INTO MovieCast
 c. Ao tentar criar uma relação com uma com um ator inexistente, o SQL retorna um erro. O erro diz que não possível atualizar uma 'linha' filho, pois a uma restrição de chave estrangeira que falhou.
 
 d. Ao tentar deletar um ator que possue dados inseridos em sua tabela de referência, o SQL retorna um erro. O erro diz que não possível atualizar uma 'linha' pai, pois a uma restrição de chave estrangeira que falhou.
+
+<br>
+
+## Exercício 3
+***
+a. A query está executando um SELECT na tabela 'Movie' e juntando com a 'Rating'. O 'ON' indica a comparação entre as chaves estrangeiras para que o INNER JOIN seja executado.
+
+```sql
+b. 
+
+SELECT title, AVG(RATE) FROM Films INNER JOIN Rating ON Films.id = Rating.movie_id GROUP BY title
+```
