@@ -7,7 +7,7 @@ const app: Express = express()
 app.use(express.json())
 app.use(cors())
 
-app.get("/recipes/all", getAllUsers)
+app.get("/users", getAllUsers)
 
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {
