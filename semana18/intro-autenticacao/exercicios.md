@@ -18,4 +18,35 @@ b.
 
 ## Exercício 2
 ***
-a. 
+a. O código em questão está armazenando o nome de uma tabela, acessando um banco de dados através do knex e criando uma query de consulta para a tabela armazenada na const.
+
+b.
+```sql
+CREATE TABLE User (
+	id VARCHAR(255) PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+```
+
+c.
+```js
+const createUser = async (
+		id: string, 
+		email: string, 
+		password: string) => {
+	  await connection
+	    .insert({
+	      id,
+	      email,
+	      password,
+	    })
+	    .into(userTableName);
+	};
+```
+
+<br>
+
+## Exercício 2
+***
+a.
