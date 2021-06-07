@@ -181,3 +181,17 @@ app.post("/user/login", async (req: Request, res: Response) => {
 ## Exercício 7
 ***
 
+a. A linha `as any` precisa ser utlizada pois não sabemos o tipo de retorno que o método verify da jwt irá retornar.
+
+b. 
+```js
+import * as jwt from "jsonwebtoken";
+
+const getData = (token: string): AuthenticationData => {
+  const payload = jwt.verify(token, process.env.JWT_KEY as string) as any;
+  const result = {
+    id: payload.id,
+  };
+  return result;
+};
+```
