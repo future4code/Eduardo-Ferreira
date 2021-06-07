@@ -47,6 +47,37 @@ const createUser = async (
 
 <br>
 
-## Exercício 2
+## Exercício 3
 ***
-a.
+a. A linha deixa explícito o tipo de dado que está sendo passado por parâmetro.
+
+b.
+```ts
+type AuthenticationData = {
+  id: string;
+}
+
+import * as jwt from "jsonwebtoken";
+
+  const expiresIn = "1min";
+  const generateToken(input: AuthenticationData): string {
+    const token = jwt.sign(
+      {
+        id: input.id,
+      },
+      process.env.JWT_KEY as string,
+      {
+        expiresIn
+      }
+    );
+    return token;
+  }
+}
+
+``` 
+
+<br>
+
+## Exercício 4
+***
+
